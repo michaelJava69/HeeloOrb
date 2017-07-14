@@ -24,7 +24,9 @@ public class DirectAuthenticationService {
         HttpHeaders authHeaders = new HttpHeaders();
         authHeaders.add(HttpHeaders.AUTHORIZATION, dlData);
         HttpEntity<Void> req = new HttpEntity<>(null, authHeaders);
+        System.out.println("Getting token Token ********************* " );
         ResponseEntity<Token> response = restTemplate.exchange(directLoginUrl, HttpMethod.GET, req, Token.class);
+        System.out.println("Got token Token ********************* "+response.getBody().getToken() );
         return response.getBody().getToken();
     }
 

@@ -26,8 +26,8 @@ public class AccountService {
         System.out.println("  we are here *********");
     	HttpEntity<Void> req = prepareAuthRequest(token);
     	
-    	System.out.println("  privateAccountUrl * "+privateAccountUrl);
-    	System.out.println("  apiUrll * "+apiUrl);
+    	System.out.println(" Account Service : privateAccountUrl * "+privateAccountUrl);
+    	System.out.println(" Account Service : apiUrll * "+apiUrl);
     	
         Account[] accounts = restTemplate.exchange(privateAccountUrl, HttpMethod.GET, req,  Account[].class).getBody();
 
@@ -37,7 +37,7 @@ public class AccountService {
 
         return Stream.of(accounts).map(account -> {
             String acctDetailsUrl = String.format("%s/my/banks/%s/accounts/%s/account", apiUrl, account.getBankId(), account.getId());
-            System.out.println("  acctDetailsUrl * "+acctDetailsUrl);
+            System.out.println("  Account Service : acctDetailsUrl * "+acctDetailsUrl);
             
             return restTemplate.exchange(acctDetailsUrl, HttpMethod.GET, req, Account.class).getBody();
         }).collect(Collectors.toList());
@@ -47,7 +47,7 @@ public class AccountService {
         HttpHeaders authHeaders = new HttpHeaders();
         String dlHeader = String.format("DirectLogin token=%s", token);
         authHeaders.add(HttpHeaders.AUTHORIZATION, dlHeader);
-        System.out.println("  prepareAuthRequest * " );
+        System.out.println(" ************ prepareAuthRequest *********** " );
         return new HttpEntity<>(null, authHeaders);
     }
 }

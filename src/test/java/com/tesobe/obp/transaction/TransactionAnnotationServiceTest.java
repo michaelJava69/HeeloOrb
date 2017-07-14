@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.ListIterator;
 
 import static com.tesobe.obp.account.Transaction.Tag;
 
@@ -21,10 +22,28 @@ public class TransactionAnnotationServiceTest extends AbstractTestSupport {
     public void addTagOk() {
         List<Account> accounts = accountService.fetchPrivateAccounts(authToken, true);
         Account ownAccount = accounts.get(0);
+         System.out.println("Transaction test ownAccount account Id "+ownAccount.getId());
+     	 System.out.println("Transaction test ownAccount account Label "+ownAccount.getLabel());
+   	     System.out.println("Transaction test ownAccount account BankId "+ownAccount.getBankId());
+   	     System.out.println("Transaction test  ownAccount  Balance "+ownAccount.getBalance());
+   	     
         List<Transaction> transactions = monetaryTransactionsService.fetchTransactionList(authToken, ownAccount);
-
+        System.out.println("transactions  "+transactions);
+        
+        ListIterator key =transactions.listIterator();
+        Transaction trans;
+        while(key.hasNext()){
+        	 trans = (Transaction)key.next(); 
+        	 System.out.println("TRAN Id "+trans.getId());
+        	 System.out.println("TRAN  OWN ACC "+trans.getOwnAccount());
+        	 System.out.println("TRAN DETAILS "+trans.getDetails());
+        	 System.out.println("TRAN METADATA "+trans.getMetadata());
+        } 
+        
         Transaction tx = transactions.get(0);
-
+        System.out.println("TRAN.GET(0)  "+tx);
+        
+        
         String tagValue = "food";
         Tag tag = transactionAnnotationService.addTag(authToken, tx, tagValue);
         Assert.assertNotNull(tag.getId());

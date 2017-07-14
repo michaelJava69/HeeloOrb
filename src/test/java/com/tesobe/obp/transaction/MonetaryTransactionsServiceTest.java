@@ -26,7 +26,13 @@ public class MonetaryTransactionsServiceTest extends AbstractTestSupport {
         Assert.assertTrue(accounts.size() > 0);
 
         List<Transaction> transactions = monetaryTransactionsService.fetchTransactionList(authToken, accounts.get(0));
+        
+        if  (transactions.size() == 0) 
+            System.out.println("  **** MonetaryTransactionsSerevice :no transactions ****");
+        
         Assert.assertTrue(transactions.size() > 0);
+        
+        
     }
 
 }

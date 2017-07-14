@@ -24,6 +24,9 @@ public class MonetaryTransactionsService {
     public List<Transaction> fetchTransactionList(String token, Account account) {
         String allTransactionsUrl = String.format("%s/banks/%s/accounts/%s/owner/transactions", apiUrl, account.getBankId(), account.getId());
         HttpEntity<Void> req = prepareAuthRequest(token);
+        
+        System.out.println("MonetaryTransactionsService : allTransactionsUrl "+allTransactionsUrl);
+        
         Transactions transactions = restTemplate.exchange(allTransactionsUrl, HttpMethod.GET, req, Transactions.class).getBody();
         return transactions.getTransactions();
     }

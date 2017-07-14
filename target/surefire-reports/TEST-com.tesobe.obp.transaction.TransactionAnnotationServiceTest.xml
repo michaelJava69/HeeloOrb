@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tesobe.obp.transaction.TransactionAnnotationServiceTest" time="4.357" tests="2" errors="2" skipped="0" failures="0">
+<testsuite name="com.tesobe.obp.transaction.TransactionAnnotationServiceTest" time="3.924" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Michael Storage\Michael_2017_Jan\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3295744239793198262.tmp"/>
+    <property name="classworlds.conf" value="C:\Michael Storage\Michael_2017_Jan\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1532315042561430822.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Users\micha\Downloads\curl-7.54.1-win64-mingw\curl-7.54.1-win64-mingw\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\micha\AppData\Local\Microsoft\WindowsApps;;C:\Users\micha\Downloads\eclipse-jee-neon-3-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,48 +60,59 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="addTagOk" classname="com.tesobe.obp.transaction.TransactionAnnotationServiceTest" time="2.33">
+  <testcase name="addTagOk" classname="com.tesobe.obp.transaction.TransactionAnnotationServiceTest" time="1.896">
     <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
 	at java.util.ArrayList.get(ArrayList.java:429)
-	at com.tesobe.obp.transaction.TransactionAnnotationServiceTest.addTagOk(TransactionAnnotationServiceTest.java:26)
+	at com.tesobe.obp.transaction.TransactionAnnotationServiceTest.addTagOk(TransactionAnnotationServiceTest.java:43)
 </error>
-    <system-out><![CDATA[2017-07-14 00:29:05.466  INFO 7540 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tesobe.obp.transaction.TransactionAnnotationServiceTest], using SpringBootContextLoader
-2017-07-14 00:29:05.466  INFO 7540 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.tesobe.obp.transaction.TransactionAnnotationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2017-07-14 00:29:05.466  INFO 7540 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tesobe.obp.transaction.TransactionAnnotationServiceTest]: TransactionAnnotationServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2017-07-14 00:29:05.466  INFO 7540 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tesobe.obp.Application for test class com.tesobe.obp.transaction.TransactionAnnotationServiceTest
-2017-07-14 00:29:05.481  INFO 7540 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2017-07-14 00:29:05.481  INFO 7540 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-2017-07-14 00:29:05.481  INFO 7540 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
-2017-07-14 00:29:05.481  INFO 7540 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2416498e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6b2e0f78, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener@240f6c41, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3659d7b1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2015b2cd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3bdb2c78, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@64693226, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1c758545, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@117bcfdc]
+    <system-out><![CDATA[2017-07-14 01:52:43.109  INFO 18292 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tesobe.obp.transaction.TransactionAnnotationServiceTest], using SpringBootContextLoader
+2017-07-14 01:52:43.109  INFO 18292 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.tesobe.obp.transaction.TransactionAnnotationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-07-14 01:52:43.109  INFO 18292 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tesobe.obp.transaction.TransactionAnnotationServiceTest]: TransactionAnnotationServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-07-14 01:52:43.109  INFO 18292 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tesobe.obp.Application for test class com.tesobe.obp.transaction.TransactionAnnotationServiceTest
+2017-07-14 01:52:43.109  INFO 18292 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-07-14 01:52:43.109  INFO 18292 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-07-14 01:52:43.109  INFO 18292 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-07-14 01:52:43.109  INFO 18292 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2416498e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6b2e0f78, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener@240f6c41, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3659d7b1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2015b2cd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3bdb2c78, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@64693226, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1c758545, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@117bcfdc]
 inside intialisation *******************************************************
 username ********************* ugbecmu
 password ********************* Azuka@1969
-authToken ********************* eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOiIifQ.SJ_xJhghqi-WTFDHZb6hpY0NiVURir_jWc4fKzXnaus
+Getting token Token ********************* 
+Got token Token ********************* eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOiIifQ.v_DOnfelJ-H-o-Lzw2JbyeXY7eWxAIbGuVT76q5wwzg
+authToken ********************* eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOiIifQ.v_DOnfelJ-H-o-Lzw2JbyeXY7eWxAIbGuVT76q5wwzg
   we are here *********
-  prepareAuthRequest * 
-  privateAccountUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/accounts
-  apiUrll * https://apisandbox.openbankproject.com/obp/v2.2.0
-  acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Joy/account
-  acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Michael/account
+ ************ prepareAuthRequest *********** 
+ Account Service : privateAccountUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/accounts
+ Account Service : apiUrll * https://apisandbox.openbankproject.com/obp/v2.2.0
+  Account Service : acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Joy/account
+  Account Service : acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Michael/account
+Transaction test ownAccount account Id Joy
+Transaction test ownAccount account Label null
+Transaction test ownAccount account BankId rbs
+Transaction test  ownAccount  Balance EUR 1000.00
+MonetaryTransactionsService : allTransactionsUrl https://apisandbox.openbankproject.com/obp/v2.2.0/banks/rbs/accounts/Joy/owner/transactions
+transactions  []
 ]]></system-out>
   </testcase>
-  <testcase name="deleteTagOk" classname="com.tesobe.obp.transaction.TransactionAnnotationServiceTest" time="2.027">
+  <testcase name="deleteTagOk" classname="com.tesobe.obp.transaction.TransactionAnnotationServiceTest" time="2.028">
     <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
 	at java.util.ArrayList.get(ArrayList.java:429)
-	at com.tesobe.obp.transaction.TransactionAnnotationServiceTest.deleteTagOk(TransactionAnnotationServiceTest.java:42)
+	at com.tesobe.obp.transaction.TransactionAnnotationServiceTest.deleteTagOk(TransactionAnnotationServiceTest.java:61)
 </error>
     <system-out><![CDATA[inside intialisation *******************************************************
 username ********************* ugbecmu
 password ********************* Azuka@1969
-authToken ********************* eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOiIifQ._vtXCH_LG1ej9H1udhqAG4wbOHCnk0QElql1igszmV0
+Getting token Token ********************* 
+Got token Token ********************* eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOiIifQ.Yh_bwqUvJ0S3rD47v0pnGBCFxjQ75qkPwJ0rKa9YhLs
+authToken ********************* eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOiIifQ.Yh_bwqUvJ0S3rD47v0pnGBCFxjQ75qkPwJ0rKa9YhLs
   we are here *********
-  prepareAuthRequest * 
-  privateAccountUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/accounts
-  apiUrll * https://apisandbox.openbankproject.com/obp/v2.2.0
-  acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Joy/account
-  acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Michael/account
+ ************ prepareAuthRequest *********** 
+ Account Service : privateAccountUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/accounts
+ Account Service : apiUrll * https://apisandbox.openbankproject.com/obp/v2.2.0
+  Account Service : acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Joy/account
+  Account Service : acctDetailsUrl * https://apisandbox.openbankproject.com/obp/v2.2.0/my/banks/rbs/accounts/Michael/account
+MonetaryTransactionsService : allTransactionsUrl https://apisandbox.openbankproject.com/obp/v2.2.0/banks/rbs/accounts/Joy/owner/transactions
 ]]></system-out>
   </testcase>
 </testsuite>

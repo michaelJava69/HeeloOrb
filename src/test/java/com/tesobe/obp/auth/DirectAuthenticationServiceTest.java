@@ -25,6 +25,7 @@ public class DirectAuthenticationServiceTest {
     public void loginOk() throws Exception {
         String token = directAuthenticationService.login(username, password);
         Assert.assertNotNull(token);
+        System.out.println("DirectAUTH loginokay authToken ********************* "+token);
     }
 
     @Test(expected = HttpClientErrorException.class)
@@ -32,6 +33,7 @@ public class DirectAuthenticationServiceTest {
         String username = "wrong";
         String password = "garble";
         String token = directAuthenticationService.login(username, password);
+        System.out.println("DirectAUTH bad cred authToken ********************* "+token);
         Assert.assertNotNull(token);
     }
 
